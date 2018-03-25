@@ -1,0 +1,197 @@
+#content {
+	margin-left: 120px;
+}
+section#content > div {	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+	section#content > div {
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+}
+
+
+#sidebar {
+	width: 120px;
+	height: 100vh;
+	position: fixed;
+	
+	text-align: center;
+	color: white;
+	background-color: rgb(14, 125, 152);
+	
+	border-right: 1px solid rgb(76, 208, 223);
+	
+	display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+	-webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+#sidebar a {
+	color: white;
+}
+#sidebar img {
+	width: 50px;
+	height: 50px;
+}
+#sidebar li {
+	padding: 20px 5px;
+}
+#sidebar li:hover {
+	background-color: rgb(76, 208, 223);
+}
+
+#sidebar ul:first-child li:first-child {
+	border-bottom: 1px solid rgb(76, 208, 223);
+}
+#sidebar ul:nth-child(2) li:last-child{
+	border-top: 1px solid rgb(76, 208, 223);
+}
+
+
+#meter_nav {
+	width: 100%;
+}
+#meter_nav ul {
+	background-color: rgb(14, 125, 152);
+	
+	display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+#meter_nav li {
+	min-width: 250px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	
+	padding: 20px 25px;
+	margin: 0px;
+}
+@media screen and (max-width: 450px) {
+	#meter_nav ul {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+}
+#meter_nav li:hover {
+	cursor: pointer;
+	background-color: rgb(76, 208, 223);
+}
+
+#mainMeterChart_groupBy {
+	text-align: center;
+	padding-top: 15px;
+}
+
+
+
+#meterChart {
+	padding: 15px;
+}
+#meterChart > div {
+	display: none;
+}
+.meterWrapperDisplay {
+	display: block !important;
+}
+#meterChart > div > div > div {
+	padding: 15px 5px;
+}
+#meterChart table {
+	width: 100%;
+	min-width: 250px;
+	text-align: center;
+	margin: 0px auto;
+	background-color: rgb(14,125,142);
+	
+    border:none;
+    border-collapse: collapse;
+}
+#meterChart th,
+#meterChart td {
+	color: white;
+	text-align: center;
+}
+#meterChart th:first-child,
+#meterChart td:first-child { 
+	border-left: none;
+}
+
+#meterChart th {
+	font-weight: bold;
+	padding: 15px 0px;
+	position: relative;
+}
+.th_border_bottom {
+	width: 70%;
+	border-bottom: 1px solid rgb(76, 208, 223);
+	
+	position: absolute;
+	bottom: 0%;
+	left: 15%;
+}
+
+#meterChart td {
+	padding: 10px 0px;
+}
+
+canvas {
+	max-width: 100%;
+	min-width: 250px;
+	max-height: 600px;
+}
+
+.quick_map {
+	cursor: pointer;
+	font-style: italic;
+	color: cyan;
+	width: 50px;
+	margin: 0px auto;
+}
+.quick_map:hover {
+	color: white;
+	background-color: rgb(76, 208, 223);
+}
+
+#mapWrapper {	
+	/* MapWrapper Dimensions */
+	width: 100%;
+    height: 100%;
+	
+	/* Center Map Wrapper */
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	margin: 0px;
+	
+	display: none;
+	z-index: 5001;
+}
+#mapWrapper > div {
+	width:100%;
+	height:100%;
+}
+#mapWrapper span {
+	cursor: pointer;
+	font-size: 30px;
+	color: white;
+	background-color: lightgrey;
+	
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 15px;
+}

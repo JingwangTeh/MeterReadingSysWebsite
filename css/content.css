@@ -1,0 +1,870 @@
+#content {
+}
+section#content > div {	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+	section#content > div {
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+}
+
+
+
+#group {
+	padding-top: 75px;
+	
+	min-height: 500px;
+	
+	text-align: center;
+	color: white;
+	background-color: rgb(16, 143, 162);
+	/*background-color: rgb(14,125,142);*/
+	/*background-color: rgb(128, 206, 214);*/
+	
+	-webkit-justify-content: center; /* Horizontal Centered */
+	justify-content: center;
+	-webkit-align-items: center; /* Vertically Centered */
+    align-items: center;
+}
+
+#group img {
+	width: 150px;
+	height: 150px;
+}
+#group h1 {
+	font-size: 35px;
+	font-weight: bold;
+	font-style: italic;
+	padding: 15px;
+}
+
+
+
+
+
+#features {
+	min-height: 500px;
+	
+	color: white;
+	/*background-color: rgb(16, 143, 162);*/
+	background-color: rgb(18, 163, 186);
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 25px 0px;
+}
+#features h1 {
+	font-size: 35px;
+	font-weight: bold;
+	
+	position: relative;
+	
+	padding-bottom: 17px;
+	margin-bottom: 20px;
+}
+#features > h1:after {
+	content:'.....';
+	font-size: 30px;
+	
+	overflow: hidden;
+	
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	left: 40%;
+}
+/* Feature Wrapper */
+#features > div {
+	width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	/* Centering All Feature Sections when in column direction */
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	padding: 10px 15px 0px 15px; /* Bottom padding decided by Content Section padding (#Features) */
+}
+/* Left Feature, Screenshot, Right Feature Sections */
+#features > div > div {
+	
+	width: 100%; /* Needs to be 100% when in column direction */
+	/*min-height: 550px;*/ /* Too much height when in column direction */
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	/* Feature Content in column direction 
+	 * Allows adding more feature content while staying inside border
+	 */
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	/*border: 1px solid blue;*/
+}
+/* Left & Right Feature Content */
+#features > div > div:not(:nth-child(2)) > div {
+	width: 100%;
+	height: 100%; /* Equal Height Distribution */
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	
+	/* Centering Text */
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	/* Padding when section in column for spacing content from borders */
+	padding: 15px 5px;
+}
+
+#features > div > div h2 {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#features > div > div img {
+	-webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+	-webkit-transition: height 0.5s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+#features > div > div:not(:nth-child(2)) img {	
+	width: 75px;
+	height: 75px;
+	margin: 0px auto;
+}
+/* Screenshot */
+.feature-screenshot-slides img {
+	width: 350px;
+	height: 500px; /* Content height dependent on screenshot height */
+	padding: 10px 25px 10px 25px;
+}
+
+#feature-screenshot-container {
+	width: 100%;
+
+	padding: 25px 0px 45px 0px;
+	overflow: hidden;
+}
+#feature-screenshot-slider {
+	width: 100%;
+
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+}
+.feature-screenshot-slides {
+	/* Text Content Horizontal Centering */
+	text-align: center;
+	
+	background-color: rgb(56, 197, 225);
+	border-radius: 5px;
+	display: none;
+	
+	/* Centering Content Vertically */
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+/* Link below screenshot */
+#product_link_div {
+	text-align: center;
+	color: white;
+}
+#product_link_div a,
+#product_link_div a:link,
+#product_link_div a:visited,
+#product_link_div a:hover,
+#product_link_div a:active {
+	color: white;
+}
+#product_link_div img {
+	width: 150px;
+	height: 40px;
+}
+
+
+@media screen and (max-width: 900px) {
+	#features > div {
+		/* Change Layout Direction of Left Feature, Screenshot, Right Feature */
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		/*-webkit-flex: 1 0 auto;
+		flex: 1 0 auto;
+		-webkit-flex: 0;
+		flex-shrink: 0;*/
+	
+		padding: 10px 10px;
+	}
+	#features > div > div {
+		overflow: hidden;
+		-webkit-flex: 1 0 auto;
+		flex: 1 0 auto;
+		-webkit-flex: 0;
+		flex-shrink: 0;
+	}
+	#features > div > div > div{
+		height: 100%;
+		
+		-webkit-flex: 1 0 auto;
+		flex: 1 0 auto;
+		-webkit-flex: 0;
+		flex-shrink: 0;		
+	}
+	.feature-screenshot-slides img {
+		width: 294px;
+		height: 420px;
+	}
+}
+@media screen and (max-width: 678px) {
+	#features > div {
+		padding: 10px 5px;
+	}
+	.feature-screenshot-slides img {
+		width: 245px;
+		height: 350px;
+	}
+}
+@media screen and (max-width: 400px) {
+	#features > div {
+		padding: 10px 0px;
+	}
+	.feature-screenshot-slides img {
+		width: 189.7px;
+		height: 271x;
+	}
+}
+
+#promo_video {
+	min-height: 500px;
+	
+	text-align: center;
+	color: white;
+	background-color: rgb(18, 163, 186);
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 15px 0px;
+}
+
+#promo_video > div {
+	width: 90%;
+	height: 400px !important;
+	
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+}
+#promo_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#project {
+	width: 100%;
+	min-height: 500px;
+	
+	color: white;
+	background-color: rgb(16, 143, 162);
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+}
+#project > div {
+	width: 100%;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: space-between; /* Space between Left and Right Section */
+	justify-content: space-between;
+}
+#project h1 {
+	font-size: 26px;
+	font-weight: bold;
+}
+/* In Left and Right Section */
+/* Note: Left Section has project aim & problem statement divs */
+#project > div > div {
+	width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+#project > div > div:first-child {
+	padding: 0px 50px 0px 100px;
+}
+#project > div > div:nth-child(2) {
+	padding: 0px 100px 0px 50px;
+}
+#project > div > div > div {
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
+	-webkit-flex: 0;
+	flex-shrink: 0;
+}
+#project > div > div:first-child > div {
+	height: 50%;
+}
+
+#project > div > div h1 {
+	font-weight: bold;
+	font-size: 24px;
+	padding: 30px 0px 20px 0px;
+}
+#project > div > div p {
+	text-align: left;
+	font-size: 18px;
+	line-height: 24px;
+}
+@media screen and (max-width: 900px) {
+	#project > div {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	#project > div > div:first-child {
+		padding: 0px 50px 0px 50px;
+	}
+	#project > div > div:nth-child(2) {
+		padding: 0px 50px 30px 50px;
+	}
+	#project > div > div h1 {
+		padding: 30px 0px 20px 0px;
+	}
+}
+
+
+
+
+
+
+#issues {
+	width: 100%;
+	min-height: 500px;
+	
+	color: white;
+	background-color: rgb(18, 163, 186);
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 30px 0px;
+}
+#issues > h1 {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	
+	position: relative;
+	padding: 25px 0px;
+}
+#issues > h1:after {
+	content:'.....';
+	font-size: 30px;
+	color: white;
+	
+	overflow: hidden;
+	
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	left: 45%;
+}
+/* Issues Wrapper */
+#issues > div {
+	width: 100%;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: space-between; /* Space between Left and Right Section */
+	justify-content: space-between;
+}
+/* In each issue div */
+#issues > div > div {
+	width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	padding: 20px 5px;
+}
+#issues > div > div > div {
+	width: 95%;
+	padding: 15px 0px;
+}
+#issues > div > div:hover > div {
+	/*border: 2px solid rgb(14, 125, 142);*/
+	/*border: 3px solid rgb(128, 206, 214);*/
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey;
+	border-radius: 5px;
+	font-style: italic;
+}
+#issues > div > div img {
+	width: 125px;
+	height: 125px;
+}
+#issues > div > div h2 {
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px 0px;
+}
+#issues > div > div p {
+	text-align: left;
+	font-size: 18px;
+	line-height: 24px;
+	
+	padding: 0px 25px;
+}
+@media screen and (max-width: 900px) {
+	#issues > div {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}	
+	#issues > div > div > div {
+		border-top: 0px;
+	}
+}
+
+
+
+
+
+#clients {
+	width: 100%;
+	min-height: 500px;
+	
+	color: white;
+	background-color: rgb(16, 143, 162);
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 30px 0px;
+}
+#clients > h1 {
+	font-size: 30px;
+	font-weight: bold;
+	
+	position: relative;
+	padding: 25px 0px;
+}
+#clients > h1:after {
+	content:'.....';
+	font-size: 30px;
+	
+	overflow: hidden;
+	
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	left: 45%;
+}
+
+/* Clients Wrapper */
+#clients > div {
+	width: 100%;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: space-between; /* Space between Left and Right Section */
+	justify-content: space-between;
+	
+	padding: 20px 0px;
+}
+@media screen and (max-width: 768px) {
+	#clients > div {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+}
+/* In each clients div */
+#clients > div > div {
+	width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	padding: 15px 5px;
+}
+#clients > div > div h2 {
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px 0px;
+}
+#clients > div > div p {
+	text-align: left;
+	font-size: 18px;
+	line-height: 24px;
+	
+	padding-left: 25px;
+}
+
+
+
+
+
+#team {
+	width: 100%;
+	min-height: 500px;
+	
+	color: white;
+	background-color: rgb(18, 163, 186);
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 25px 0px;
+}
+#team > h1 {
+	font-size: 30px;
+	font-weight: bold;
+	
+	position: relative;
+	padding-bottom: 17px;
+	margin-bottom: 20px;
+}
+#team > h1:after {
+	content:'.....';
+	font-size: 30px;
+	
+	overflow: hidden;
+	
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	left: 40%;
+}
+
+/* Slider Outer Wrapper */
+#slider-container {
+	width: 60%;
+	
+	padding-top: 15px;
+	overflow: hidden;
+}
+/* Slider Inner Wrapper */
+#slider {
+	width: 100%;
+	
+	overflow: hidden;
+	white-space: nowrap;
+	
+	/* Space between slider section and navigation arrows */
+	padding: 10px 0px;
+}
+#slider-container button {
+	border-radius: 5px;
+	background-color: rgb(16, 143, 162);
+}
+#slider-container button:hover {
+	background-color: rgb(5, 183, 197);
+}
+/* Slider Content */
+#slider ul {
+	list-style: none;
+	width: 100%;
+}
+/* Individual Slider Section */
+#slider li {
+	width: 100%;
+	min-height: 400px;
+	
+	/*background-color: red;*/
+	
+	/* Inline Lists */
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	
+	/* For vertical centering slides */
+	position: relative;
+	
+	-webkit-transition: min-height 2s ease-in-out;
+    transition: min-height 2s ease-in-out;
+	
+	
+	overflow: hidden;
+}
+
+/* Slider Section Content */
+.mySlides {
+	width: 90%;
+	
+	background-color: rgb(16, 143, 162);
+	
+	/* White-space set back to default
+	 * (undo white-space setting in slider)
+	 */
+	white-space: normal;
+	
+	/* Text Content Horizontal Centering */
+	text-align: center;
+	
+	/* Vertical Centering */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	padding: 25px 20px;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	
+	/* Centering Text Vertically */
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.mySlides img {
+	width: 125px;
+	height: 125px;
+	border-radius: 100%;
+	
+	padding: 15px;
+	margin: 0px auto;
+}
+.mySlides p {
+}
+.mySlides:hover {
+}
+/* Navigation Circles */
+.w3-badge {
+	height: 20px;
+	width: 20px;
+	
+	background-color: rgba(255,255,255,0.1);
+	
+	border: 1px solid rgb(16, 143, 162);
+	padding:0;
+	
+	cursor:pointer;
+}
+.w3-badge:hover,
+.w3-badge-sd-color {
+	background-color: rgb(76, 208, 223);
+}
+
+@media screen and (max-width: 950px) {
+	#slider li {
+		min-height: 480px;
+	}
+}
+@media screen and (max-width: 770px) {
+	#slider li {
+		min-height: 560px;
+	}
+}
+@media screen and (max-width: 650px) {
+	#slider li {
+		min-height: 630px;
+	}
+}
+@media screen and (max-width: 570px) {
+	#slider li {
+		min-height: 730px;
+	}
+}
+@media screen and (max-width: 468px) {
+	#slider li {
+		min-height: 950px;
+	}
+}
+@media screen and (max-width: 374px) {
+	#slider li {
+		min-height: 1250px;
+	}
+}
+@media screen and (max-width: 300px) {
+	#slider li {
+		min-height: 1800px;
+	}
+}
+@media screen and (max-width: 230px) {
+	#slider li {
+		min-height: 1850px;
+	}
+}
+
+
+
+
+#about {
+	width: 100%;
+	height: 500px;
+	
+	color: white;
+	background-color: rgb(16, 143, 162);
+	/*background-color: rgb(128, 206, 214);*/
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;	
+}
+#about > h1 {
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px 0px;
+}
+#about > div p {
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+
+
+
+
+
+#contact {
+	width: 100%;
+	min-height: 500px;
+	
+	color: white;
+	background-color: rgb(14,125,142);
+	/*background-color: rgb(97, 134, 133);*/
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 50px 0px;
+}
+#contact h1 {
+	font-weight: bold;
+	font-size: 24px;
+	padding-bottom: 30px;
+}
+#contact > div {
+	width: 80%;
+}
+#contact form p{
+	width: 99%;
+	margin: 0px auto;
+	margin-bottom: 15px;
+}
+#contact form p:first-child,
+#contact form p:nth-child(2){
+	width: 49%;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+}
+
+#contact form input,
+#contact form textarea {
+	font-size: 18px;
+	line-height: 24px;
+	
+	color: white;
+	background-color: rgba(213, 244, 230, 0.15);
+	
+	border: 1px solid white;
+	border-radius: 5px;
+	
+	padding: 5px;
+}
+
+#contact form p input {
+	width: 100%;
+	height: 50px;
+}
+#contact form textarea {
+	width: 100%;
+	height: 150px;
+}
+
+#contact form > div {
+	width: 100%;
+}
+#contact form > div > input {
+	width: 50%;
+	height: 50px;
+	margin: 0px auto;
+	display: block;
+}

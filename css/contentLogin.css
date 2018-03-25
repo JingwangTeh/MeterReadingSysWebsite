@@ -1,0 +1,118 @@
+#content {
+}
+section#content > div {	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+	section#content > div {
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+}
+
+
+
+#loginForm {
+	width: 100%;
+	min-height: 600px;
+	
+	color: white;
+	background-color: rgb(14,125,142);
+	/*background-color: rgb(97, 134, 133);*/
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 50px 0px;
+}/*
+#loginForm h1 {
+	font-weight: bold;
+	font-size: 24px;
+	padding-bottom: 30px;
+}
+#loginForm > div {
+	width: 80%;
+}*/
+#loginForm form {
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+#loginForm form p{
+	width: 100%;
+	margin: 0px auto;
+	margin-bottom: 15px;
+	
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+/*
+#loginForm form p:first-child,
+#loginForm form p:nth-child(2){
+	width: 49%;
+	float: left;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+}*/
+
+#loginForm form input,
+#loginForm form textarea,
+#loginForm form button {
+	text-align: center;
+	
+	font-size: 18px;
+	line-height: 24px;
+	
+	color: white;
+	background-color: rgba(213, 244, 230, 0.15);
+	
+	border: 1px solid white;
+	border-radius: 5px;
+	
+	padding: 5px;
+}
+
+#loginForm form input {
+	width: 100%;
+	height: 50px;
+}
+#loginForm form button {
+	background-color: rgba(255, 255, 255, 0.5);
+	
+	width: 90%;
+	height: 50px;
+}
+
+/*
+#loginForm form > div {
+	width: 100%;
+}
+#loginForm form > div > input {
+	width: 100%;
+	height: 50px;
+	margin: 0px auto;
+	display: block;
+}*/
+
+
+.loginError {
+	color: rgb(255, 26, 26);
+	font-size: 20px;
+}

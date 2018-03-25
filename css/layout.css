@@ -1,0 +1,325 @@
+html, body {
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+  
+/* Body */
+#home {
+	font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+	background-color: white;
+}
+
+/* Page Wrapper */
+#page-wrapper {
+	/*background-color: red;*/
+	/*display: none; /* show content after page load using javascript */
+	z-index: -1000; /* use z-index instead of display due to elements not loading before displaying and messing up javascript code */
+	
+	width: 100%;
+	margin: 0px auto;
+}
+
+
+
+/* Header */
+header {
+	background-color: rgba(0, 88, 98, 1);
+	width: 100%;
+	height: 75px;
+	-webkit-transition: height 1s ease-in-out, background-color 1s ease-in-out;
+	transition : height 1s ease-in-out, background-color 1s ease-in-out;
+	
+	display: flex;
+	display: -webkit-flex;
+	
+	-webkit-flex-direction: row;
+	flex-direction: row;
+
+    -webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+	
+	padding: 0px 0px;
+	position: fixed;
+	
+	z-index: 1001;
+}
+header > div,
+header > nav {
+	display: flex;
+	display: -webkit-flex;
+	
+	/* Align Content Vertically */
+    -webkit-align-items: center;
+    align-items: center;
+}
+header > div:first-child {
+	/*border-right: 1px solid rgb(5, 183, 197);*/
+}
+
+/* Header (Logo & Logo Description) */
+header #logo {
+	float: left; /* gets rid of empty spaces between logo and logo-desc */
+	padding-left: 15px;
+	/*background-color: grey;*/
+}
+header #logo img {
+	width: 35px;
+	height: 35px;
+}
+
+header #logo-desc {
+	color: white;
+	/* background-color: green;*/
+	
+	display: inline-block;
+	padding: 0px 15px;
+}
+header #logo-desc a,
+header #logo-desc a:link,
+header #logo-desc a:visited,
+header #logo-desc a:hover,
+header #logo-desc a:active {
+	color: white;
+}
+header #logo-desc a:hover {
+	text-shadow: -2px -2px rgb(5, 183, 197);
+}
+
+/* Header (Navigation Links) */
+header nav li{
+	color: white;
+	text-align: center;
+	
+	display: inline-block;
+	float: left; /* gets rid of empty spaces between nav links */
+
+	position: relative;
+	padding: 15px 20px;
+}
+header a,
+header nav a:link,
+header nav a:visited,
+header nav a:hover,
+header nav a:active {
+	color: white;
+	font-size: 20px;
+}
+
+/* Header (Navigation Links - Active & Nonactive) */
+header nav a:after {
+	content:'.....';
+	font-size: 30px;
+	
+	width: 0%;
+	overflow: hidden;
+	
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	
+	transition: all 0.5s ease-in-out;
+}
+header nav a:hover:after {
+	width: 100%;
+	left: 0%;
+}
+.active_nav:after {
+	width: 100%;
+	left: 0%;
+}
+
+/* Pizza Menu */
+header #pizzaMenu {
+	width: 200px;
+	display: none;
+	z-index: 999;
+	padding: 0px 15px;
+	border-left: 1px solid rgb(5, 183, 197);
+}
+header #pizzaMenu img,
+#pizzaMenuExpanded img {
+	width: 35px;
+	height: 35px;
+}
+header #pizzaMenu:hover {
+	background-color: orange;
+}
+
+#pizzaMenuExpanded {
+	height: 100%;
+
+	color: white;
+	background-color: rgba(0, 88, 98, 1);
+	border-left: 1px solid rgb(5, 183, 197);
+	padding-top: 75px;
+	
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	
+	z-index: 1000;
+	display: none;
+	
+	-webkit-transition: padding-top 1s ease-in-out, background-color 1s ease-in-out;
+	transition: padding-top 1s ease-in-out, background-color 1s ease-in-out;
+}
+#pizzaMenuExpanded li {
+	text-align: right;
+	padding: 15px 20px;
+}
+#pizzaMenuExpanded li:hover {
+	background-color: orange;
+}
+#pizzaMenuExpanded a,
+#pizzaMenuExpanded a:visited {
+	color: white;
+	font-size: 20px;
+}
+
+/* Footer */
+footer {
+	background-color: rgba(0, 88, 98, 1);
+	width: 100%;
+	min-height: 150px;
+	
+	color: white;
+	text-align: center;
+	
+	display: flex;
+	display: -webkit-flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+    align-items: center;
+	
+	padding: 10px 0px;
+}
+footer > div {
+	width: 100%;
+	
+	display: flex;
+	display: -webkit-flex;
+
+    -webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+	padding: 20px 0px;
+}
+footer > div > div {
+	width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-justify-content: center;
+	justify-content: center;
+	
+	padding: 15px 5px;
+}
+
+footer > div > div p a {
+	text-align: center;
+	font-size: 18px;
+	line-height: 24px;
+	
+	color: white;
+	
+	padding-left: 25px;
+}
+footer a,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:active {
+	color: white;
+}
+
+.backToTop {
+	position: fixed;
+	display: none;
+	bottom: 100px;
+	right: 100px;
+	
+	z-index: 5000;
+}
+.backToTop img {
+	width: 50px;
+	height: 50px;
+}
+
+
+
+/* On Smaller Screen */
+@media screen and (max-width: 1080px) {
+	header {
+		text-align: center;
+		/*
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		*/
+		
+		/*-webkit-justify-content: flex-start;
+		justify-content: flex-start;*/
+		-webkit-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	}
+	
+	header #logo {
+		float: none;
+	}
+	
+	header #logo-desc {
+		display: block;
+	}
+
+	/* Do not display Nav */
+	header nav {
+		display: none;
+	}
+
+	header nav ul li {
+		display: block;
+		float: none;
+	}
+	
+	/* Display Collapsed Menu Pizza */
+	header #pizzaMenu {
+		display: flex;
+		display: -webkit-flex;
+
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+	}
+	
+	footer {
+	}
+	footer > div {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	footer > div > div {
+		display: flex;
+		display: -webkit-flex;
+		
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.backToTop {
+		position: fixed;
+		display: none;
+		bottom: 50px;
+		right: 50px;
+	}
+}

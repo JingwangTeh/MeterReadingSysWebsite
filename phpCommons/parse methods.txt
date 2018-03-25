@@ -1,0 +1,61 @@
+
+	/* REGISTER
+	 */
+	//use Parse\ParseUser;
+	/*
+	$user = new ParseUser();
+	$user->set("username", "my name");
+	$user->set("password", "my pass");
+	$user->set("email", "email@example.com");
+
+	try {
+	  $user->signUp();
+	  // Hooray! Let them use the app now.
+	} catch (ParseException $ex) {
+	  // Show the error message somewhere and let the user try again.
+	  echo "Error: " . $ex->getCode() . " " . $ex->getMessage();
+	}*/
+	/*
+	use Parse\ParseObject;
+	$test = new ParseObject("TestObject");	// class
+	$test->set("foo", "bar");
+	$test->set("hi", "ho");
+	
+	try {
+		$test->save();
+		echo 'New object created with objectId: ' . $test->getObjectId();
+	} catch (ParseException $ex) {
+		echo 'Failed to create new object, with error message: ' . $ex->getMessage();
+	}
+	*/
+	
+	
+/*
+	$gameScore = new ParseObject("Meter");
+	$gameScore->set("value1","123456");
+	try {
+	  $gameScore->save();
+	  echo 'New object created with objectId: ' . $gameScore->getObjectId();
+	} catch (ParseException $ex) {  
+	  echo 'Failed to create new object, with error message: ' . $ex->getMessage();
+	}*/
+
+
+/*
+	$query = new ParseQuery("Complaint");
+	try {
+		$gameScore = $query->get("1MZRf7Kqj2");
+		$score = $gameScore->get("subject");
+		echo $score, '<br/>';
+	} catch (ParseException $ex) {
+	}
+
+
+
+	$query = new ParseQuery("Complaint");
+	try {
+		$results = $query->find();
+		print_r(count($results));
+	} catch (ParseException $ex) {	
+	}
+*/
